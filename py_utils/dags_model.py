@@ -9,16 +9,16 @@ class HtgDAG(DAG):
                  model_name: str,
                  default_args: dict = None,
                  **kwargs):
-        self.model_name = model_name
-        
-        if default_args is None:
-            default_args = {}
-        
-        default_args['severity'] = severity
-        default_args['slack_alerts_channel_name'] = slack_alerts_channel_name
-        today = datetime.now().strftime('%Y%m%d')
-        super().__init__(
-            dag_id=f"tst.{dag_id}.{today}",
-            default_args=default_args,
-            **kwargs,
-        )
+                self.model_name = model_name
+                
+                if default_args is None:
+                    default_args = {}
+                
+                default_args['severity'] = severity
+                default_args['slack_alerts_channel_name'] = slack_alerts_channel_name
+                today = datetime.now().strftime('%Y%m%d')
+                super().__init__(
+                    dag_id=f"tst.{dag_id}.{today}",
+                    default_args=default_args,
+                    **kwargs,
+                )
