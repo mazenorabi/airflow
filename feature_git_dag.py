@@ -1,5 +1,5 @@
 #from airflow.models.dag import DAG
-from .py_utils.dags_model import HtgDAG
+from py_utils.dags_model import HtgDAG
 from airflow.operators.bash import BashOperator
 from airflow.operators.empty import EmptyOperator
 import pendulum
